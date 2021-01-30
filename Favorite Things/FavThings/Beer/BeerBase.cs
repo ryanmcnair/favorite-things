@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Favorite_Things.FavThings
+namespace Favorite_Things.FavThings.Beer
 {
-    class Beer
+    class BeerBase
     {
         //Properties
         public string Name { get; set; }
         public string Type { get; set; }
-        public bool IsDelicious = true;
+        public bool IsDelicious { get; set; }
+        public bool BrewedLocally { get; set; }
         //Constructor
-        public Beer(string name, string type, bool isDelicious)
+        public BeerBase()
         {
-            Name = name;
-            Type = type;
-            IsDelicious = isDelicious;
+            Name = "Beer";
+            Type = "Beer";
         }
 
 
@@ -24,11 +24,11 @@ namespace Favorite_Things.FavThings
         {
             if(isDelicious)
             {
-                Console.WriteLine($"This beer is delicious");
+                Console.WriteLine($"This {Name} beer is delicious");
             }
             else
             {
-                Console.WriteLine("Not good");
+                Console.WriteLine($"{Name}, not good");
             }
 
         }

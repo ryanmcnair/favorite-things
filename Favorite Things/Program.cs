@@ -1,5 +1,10 @@
 ﻿using System;
 using Favorite_Things.FavThings;
+using Favorite_Things.FavThings.Beer;
+using Favorite_Things.FavThings.Guitar;
+using Favorite_Things.FavThings.Record;
+using Favorite_Things.FavThings.Show;
+
 
 namespace Favorite_Things
 {
@@ -7,23 +12,35 @@ namespace Favorite_Things
     {
         static void Main(string[] args)
         {
-            Guitar lesPaul = new Guitar("Gibson", "Les Paul", 1979);
-            Guitar strat = new Guitar("Fender", "Stratocaster", 1985);
-            lesPaul.CleanUp("Les Paul");
-            lesPaul.CleanUp("Les Paul");
-            strat.Acoustic("Martin");
-            Console.WriteLine();
-            Record gratefulDead = new Record("Grateful Dead", "Wake of the Flood", 1973, true);
-            Record nickleback = new Record("Nickleback", "Silver Side Up", 2005, false);
-            Console.WriteLine();
-            Show bsg = new Show("Battlestar Galactica", "Sci-Fi", "Hulu", 2004);
-            Show sopranos = new Show("Sopranos", "Drama", "HBO", 1999);
-            bsg.IsScary("Lovecraft Country", "horror");
-            Console.WriteLine();
-            Beer budLight = new Beer("Bud Light", "Cheap beer", false);
-            Beer yazoo = new Beer("Yazoo", "Lager", true);
-            yazoo.Yummy(true);
-            budLight.Yummy(false);
+            var coorsLight = new CoorsLight();
+            coorsLight.Yummy(false);
+            var fenderTelecaster = new FenderTelecaster();
+            fenderTelecaster.Brand = "Fender";
+            fenderTelecaster.Model = "Telecaster";
+            fenderTelecaster.Year = 2018;
+            fenderTelecaster.Acoustic();
+            fenderTelecaster.CleanUp();
+            var cobraKai = new CobraKai();
+            cobraKai.OldShow();
+            var handmaidsTale = new HandmaidsTale();
+            handmaidsTale.IsScary();
+            var neilYoung = new NeilYoung();
+            neilYoung.Awesome();
+            //GuitarBase lesPaul = new GuitarBase("Gibson", "Les Paul", 1979);
+            //GuitarBase strat = new GuitarBase("Fender", "Stratocaster", 1985);
+            //strat.Acoustic("Martin");
+            //Console.WriteLine();
+            //RecordBase gratefulDead = new RecordBase("Grateful Dead", "Wake of the Flood", 1973, true);
+            //RecordBase nickleback = new RecordBase("Nickleback", "Silver Side Up", 2005, false);
+            //Console.WriteLine();
+            //ShowBase bsg = new ShowBase("Battlestar Galactica", "Sci-Fi", "Hulu", 2004);
+            //ShowBase sopranos = new ShowBase("Sopranos", "Drama", "HBO", 1999);
+            //bsg.IsScary("Lovecraft Country", "horror");
+            //Console.WriteLine();
+            //BeerBase budLight = new BeerBase("Bud Light", "Cheap beer", false);
+            //BeerBase yazoo = new BeerBase("Yazoo", "Lager", true);
+            //yazoo.Yummy(true);
+            //budLight.Yummy(false);
             
 
         }
